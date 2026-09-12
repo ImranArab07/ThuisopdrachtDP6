@@ -50,22 +50,22 @@ class Recept:
 
         return totaal_per_persoon * self.__aantal_personen
 
-def get_plantaardig_recept(self, plantaardig: bool) -> str:
-    regels = [
-        f"Naam: {self.__naam}",
-        f"Omschrijving: {self.__omschrijving}",
-        f"Aantal personen: {self.__aantal_personen}",
-        "Ingrediënten:",
-    ]
+    def get_plantaardig_recept(self, plantaardig: bool) -> str:
+        regels = [
+            f"Naam: {self.__naam}",
+            f"Omschrijving: {self.__omschrijving}",
+            f"Aantal personen: {self.__aantal_personen}",
+            "Ingrediënten:",
+        ]
 
-    for ingredient in self.__ingredienten_lijst:
-        gekozen_ingredient = ingredient.get_ingredient(plantaardig)
-        regels.append(f" - {gekozen_ingredient}")
+        for ingredient in self.__ingredienten_lijst:
+            gekozen_ingredient = ingredient.get_ingredient(plantaardig)
+            regels.append(f" - {gekozen_ingredient}")
 
-    regels.append("")
-    regels.append(f"Totaal aantal kcal: {self.get_totaal_kcal(plantaardig)}")
+        regels.append("")
+        regels.append(f"Totaal aantal kcal: {self.get_totaal_kcal(plantaardig)}")
 
-    return "\n".join(regels)
+        return "\n".join(regels)
 
-def __str__(self) -> str:
-    return self.get_plantaardig_recept(False)
+    def __str__(self) -> str:
+        return self.get_plantaardig_recept(False)
