@@ -5,8 +5,6 @@ class Ingredient:
         self.__eenheid = eenheid
         self.__plantaardig_alternatief = None  # Optioneel plantaardig alternatief
 
-    def __str__(self):
-        return f"{self.__hoeveelheid} {self.__eenheid} {self.__naam}"
 
     def set_plantaardig_alternatief(
             self, 
