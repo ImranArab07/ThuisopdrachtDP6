@@ -87,18 +87,26 @@ def toon_recepten(recepten):
 def kies_recept(recepten):
     while True:
         keuze = input("Kies een receptnummer: ").strip()
+
         if keuze == 'q':
-            break
+            return None
+
         if keuze.isdigit():
             receptnummer = int(keuze)
+
             if 1 <= receptnummer <= len(recepten):
-                recept = recepten[receptnummer - 1] # omdat pythonlijsten beginnen bij 0
+                return recepten[receptnummer - 1] # omdat pythonlijsten beginnen bij 0
             print("Recept niet gevonden.")
 
 def main():
+
     recepten = maak_recepten()
     toon_recepten(recepten)
-    kies_recept(recepten)
+    gekozen_recept = kies_recept(recepten)
+
+    if gekozen_recept is not None:
+        print()
+        print(gekozen_recept)
 
 if __name__ == "__main__":
     main()
