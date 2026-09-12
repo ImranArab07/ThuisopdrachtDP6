@@ -1,9 +1,9 @@
 class Ingredient:
     def __init__(self, naam: str, hoeveelheid: float, eenheid: str):
-        self.naam = naam
-        self.hoeveelheid = hoeveelheid
-        self.eenheid = eenheid
+        self.__naam = naam
+        self.__hoeveelheid = hoeveelheid
+        self.__eenheid = eenheid
 
     def __str__(self):
-        return f"{self.hoeveelheid} {self.eenheid} {self.naam}"
+        return f"{self.__hoeveelheid} {self.__eenheid} {self.__naam}"
     
