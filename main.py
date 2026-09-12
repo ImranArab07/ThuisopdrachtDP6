@@ -23,7 +23,7 @@ def maak_recepten():
     kip_kerrie.voeg_ingredient_toe(Ingredient("knoflook", 2, "teentjes", 10))
     kip_kerrie.voeg_ingredient_toe(Ingredient("kerriepoeder", 1, "eetlepel", 20))
 
-    kip_kerrie.voeg_stap_toe(Stap("Kook de rijst en zet een pan water met een snuf zout op het vuur voor de sperziebonen."))
+    kip_kerrie.voeg_stap_toe(Stap("Kook de rijst en zet een pan water met een snuf zout op het vuur voor de sperziebonen.", "Zorg ervoor dat je de rijst op tijd begint te koken."))
     kip_kerrie.voeg_stap_toe(Stap("Snijd de kip in kleine blokjes, snipper het uitje, snijd de knoflook fijn en snijd de kontjes van de sperziebonen en snijd de broccoli (was de sperziebonen en broccoli ook even)."))
     kip_kerrie.voeg_stap_toe(Stap("Bak de kip in een beetje olie goudbruin. Voeg de ui en knoflook toe en bak dit even mee. Voeg de kerriepoeder toe en bak dit kort mee."))
     kip_kerrie.voeg_stap_toe(Stap("Voeg de kokosmelk toe en laat het geheel 10 minuten zachtjes koken."))
@@ -69,7 +69,7 @@ def maak_recepten():
     gehakt_quiche.voeg_ingredient_toe(Ingredient("peper", 0.25, "theelepel", 2))
     gehakt_quiche.voeg_ingredient_toe(Ingredient("tijm", 0.25, "theelepel", 5))
 
-    gehakt_quiche.voeg_stap_toe(Stap("Verwarm de oven voor op 180 graden Celsius."))
+    gehakt_quiche.voeg_stap_toe(Stap("Verwarm de oven voor op 180 graden Celsius.", "Zorg ervoor dat de oven goed voorverwarmd is."))
     gehakt_quiche.voeg_stap_toe(Stap("Snijd de ui, knoflook en paprika in kleine stukjes."))
     gehakt_quiche.voeg_stap_toe(Stap("Bak het gehakt in een pan totdat het bruin is. Voeg de ui, knoflook en paprika toe en bak dit mee totdat de groenten zacht zijn."))
     gehakt_quiche.voeg_stap_toe(Stap("Bekleed een quichevorm met het quichedeeg en prik gaatjes in de bodem met een vork."))
@@ -105,7 +105,7 @@ def maak_recepten():
     spaghetti_bolognese.voeg_stap_toe(Stap("Verhit een beetje olie in een pan en bak het gehakt goudbruin."))
     spaghetti_bolognese.voeg_stap_toe(Stap("Voeg de gesnipperde ui en knoflook toe en bak dit mee."))
     spaghetti_bolognese.voeg_stap_toe(Stap("Voeg de tomatenpuree, gezeefde tomaten, basilicum, oregano, zout en peper toe."))
-    spaghetti_bolognese.voeg_stap_toe(Stap("Laat de saus 15-20 minuten sudderen op laag vuur."))
+    spaghetti_bolognese.voeg_stap_toe(Stap("Laat de saus 15-20 minuten sudderen op laag vuur.", "Roer af en toe door de saus."))
     spaghetti_bolognese.voeg_stap_toe(Stap("Serveer de saus over de spaghetti."))
 
     recepten.append(spaghetti_bolognese)
