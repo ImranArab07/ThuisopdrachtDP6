@@ -29,8 +29,8 @@ def maak_recepten():
     recepten.append(kip_kerrie)
 
     gehakt_quiche = Recept("Gehakt quiche met paprika", "Een heerlijke quiche met gehakt, kaas en paprika.")
-    gehakt_quiche.voeg_ingredient_toe(Ingredient("rundergehakt", 400, "gram"))
-    gehakt_quiche.voeg_ingredient_toe(Ingredient(" rode paprika", 1, "stuk"))
+    gehakt_quiche.voeg_ingredient_toe(Ingredient("rundergehakt", 200, "gram"))
+    gehakt_quiche.voeg_ingredient_toe(Ingredient("rode paprika", 1, "stuk"))
     gehakt_quiche.voeg_ingredient_toe(Ingredient("ui", 1, "stuk"))
     gehakt_quiche.voeg_ingredient_toe(Ingredient("quichedeeg", 2, "vellen"))
     gehakt_quiche.voeg_ingredient_toe(Ingredient("ei", 1, "stuk"))
@@ -57,8 +57,8 @@ def maak_recepten():
         "Spaghetti Bolognese", 
         "Een klassieke Italiaanse spaghetti bolognese met een rijke vlees- en tomatensaus.")
     
-    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("spaghetti", 400, "gram"))
-    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("rundergehakt", 500, "gram"))
+    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("spaghetti", 300, "gram"))
+    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("rundergehakt", 350, "gram"))
     spaghetti_bolognese.voeg_ingredient_toe(Ingredient("ui", 1, "stuk"))
     spaghetti_bolognese.voeg_ingredient_toe(Ingredient("knoflook", 2, "teentjes"))
     spaghetti_bolognese.voeg_ingredient_toe(Ingredient("tomatenpuree", 2, "eetlepels"))
