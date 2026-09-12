@@ -4,7 +4,7 @@ from stap import Stap
 
 
 
-def main():
+def maak_recepten():
     recepten = []
 
     kip_kerrie = Recept(
@@ -76,6 +76,29 @@ def main():
     spaghetti_bolognese.voeg_stap_toe(Stap("Serveer de saus over de spaghetti."))
 
     recepten.append(spaghetti_bolognese)
+
+    return recepten
+
+def toon_recepten(recepten):
+    print("Receptenboek")
+    for nummer, recept in enumerate(recepten, start=1):
+        print(f"{nummer}. {recept.get_naam()}")
+
+def kies_recept(recepten):
+    while True:
+        keuze = input("Kies een receptnummer: ").strip()
+        if keuze == 'q':
+            break
+        if keuze.isdigit():
+            receptnummer = int(keuze)
+            if 1 <= receptnummer <= len(recepten):
+                recept = recepten[receptnummer - 1] # omdat pythonlijsten beginnen bij 0
+            print("Recept niet gevonden.")
+
+def main():
+    recepten = maak_recepten()
+    toon_recepten(recepten)
+    kies_recept(recepten)
 
 if __name__ == "__main__":
     main()
