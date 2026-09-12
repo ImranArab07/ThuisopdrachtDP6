@@ -1,10 +1,25 @@
 class Ingredient:
-    def __init__(self, naam: str, hoeveelheid: float, eenheid: str):
+    def __init__(
+            self,
+            naam: str,
+            hoeveelheid: float,
+            eenheid: str,
+            kcal: int
+            ) -> None:
         self.__naam = naam
         self.__hoeveelheid = hoeveelheid
         self.__eenheid = eenheid
+        self.__kcal = kcal
         self.__plantaardig_alternatief = None  # Optioneel plantaardig alternatief
 
+    def set_hoeveelheid(self, hoeveelheid: float) -> None:
+        self.__hoeveelheid = hoeveelheid
+
+    def get_hoeveelheid(self) -> float:
+        return self.__hoeveelheid
+
+    def get_kcal(self) -> int:
+        return self.__kcal
 
     def set_plantaardig_alternatief(
             self, 
@@ -18,5 +33,5 @@ class Ingredient:
         
         return self
 
-    def __str__(self):
-        return f"{self.__hoeveelheid} {self.__eenheid} {self.__naam}"
+    def __str__(self) -> str:
+        return f"{self.__hoeveelheid:g} {self.__eenheid} {self.__naam}"
