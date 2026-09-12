@@ -53,5 +53,29 @@ def main():
 
     recepten.append(gehakt_quiche)
 
+    spaghetti_bolognese = Recept(
+        "Spaghetti Bolognese", 
+        "Een klassieke Italiaanse spaghetti bolognese met een rijke vlees- en tomatensaus.")
+    
+    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("spaghetti", 400, "gram"))
+    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("rundergehakt", 500, "gram"))
+    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("ui", 1, "stuk"))
+    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("knoflook", 2, "teentjes"))
+    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("tomatenpuree", 2, "eetlepels"))
+    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("gezeefde tomaten", 400, "gram"))
+    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("basilicum", 1, "theelepel"))
+    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("oregano", 1, "theelepel"))
+    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("zout", 1, "theelepel"))
+    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("peper", 1, "theelepel"))
+
+    spaghetti_bolognese.voeg_stap_toe(Stap("Kook de spaghetti volgens de aanwijzingen op de verpakking."))
+    spaghetti_bolognese.voeg_stap_toe(Stap("Verhit een beetje olie in een pan en bak het gehakt goudbruin."))
+    spaghetti_bolognese.voeg_stap_toe(Stap("Voeg de gesnipperde ui en knoflook toe en bak dit mee."))
+    spaghetti_bolognese.voeg_stap_toe(Stap("Voeg de tomatenpuree, gezeefde tomaten, basilicum, oregano, zout en peper toe."))
+    spaghetti_bolognese.voeg_stap_toe(Stap("Laat de saus 15-20 minuten sudderen op laag vuur."))
+    spaghetti_bolognese.voeg_stap_toe(Stap("Serveer de saus over de spaghetti."))
+
+    recepten.append(spaghetti_bolognese)
+
 if __name__ == "__main__":
     main()
