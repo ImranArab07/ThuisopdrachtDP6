@@ -114,14 +114,17 @@ def maak_recepten():
 
 def toon_recepten(recepten):
     print("Receptenboek")
+
     for nummer, recept in enumerate(recepten, start=1):
         print(f"{nummer}. {recept.get_naam()}")
 
 def kies_recept(recepten):
     while True:
-        keuze = input("Kies een receptnummer: ").strip()
+        keuze = input(
+            "Kies een receptnummer (of 'q' om te stoppen): "
+            ).strip()
 
-        if keuze == 'q':
+        if keuze.lower() == 'q':
             return None
 
         if keuze.isdigit():
@@ -129,7 +132,35 @@ def kies_recept(recepten):
 
             if 1 <= receptnummer <= len(recepten):
                 return recepten[receptnummer - 1] # omdat pythonlijsten beginnen bij 0
+            
             print("Recept niet gevonden.")
+            print()
+            toon_recepten(recepten)
+
+def vraag_aantal_personen():
+    while True:
+        invoer = input(
+            "Voor hoeveel personen wil je het recept aanpassen? "
+        ).strip()
+
+        if invoer.isdigit() and int(invoer) > 0:
+            return int(invoer)
+
+        print("Ongeldige invoer. Voer een getal in.")
+
+def vraag_plantaardig():
+    while True:
+        keuze = input(
+            "Wil je een plantaardig alternatief gebruiken? (ja/nee) "
+        ).strip().lower()
+
+        if keuze == "ja":
+            return True
+        
+        if keuze == "nee":
+            return False
+
+        print("Ongeldige invoer. Voer 'ja' of 'nee' in.")
 
 def main():
 
@@ -137,9 +168,18 @@ def main():
     toon_recepten(recepten)
     gekozen_recept = kies_recept(recepten)
 
-    if gekozen_recept is not None:
-        print()
-        print(gekozen_recept)
+    if gekozen_recept is None:
+        return
+
+    aantal_personen = vraag_aantal_personen()
+    gekozen_recept.set_aantal_personen(aantal_personen)
+
+    plantaardig = vraag_plantaardig()
+
+    print()
+    print(
+        gekozen_recept.get_plantaardig_recept(plantaardig)
+    )
 
 if __name__ == "__main__":
     main()
