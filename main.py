@@ -11,7 +11,10 @@ def maak_recepten():
         "Kip Kerrie", 
         "Een romige kip-kerrie met broccoli, sperziebonen en rijst."
      )
-    kip_kerrie.voeg_ingredient_toe(Ingredient("kipfilet", 200, "gram", 330))
+    kipfilet = Ingredient("kipfilet", 200, "gram", 330)
+    kipfilet.set_plantaardig_alternatief(Ingredient("tofu", 200, "gram", 280))
+    kip_kerrie.voeg_ingredient_toe(kipfilet)
+
     kip_kerrie.voeg_ingredient_toe(Ingredient("basmatirijst", 100, "gram", 350))
     kip_kerrie.voeg_ingredient_toe(Ingredient("sperziebonen", 150, "gram", 50))
     kip_kerrie.voeg_ingredient_toe(Ingredient("broccoli", 200, "gram", 70))
@@ -29,14 +32,39 @@ def maak_recepten():
     recepten.append(kip_kerrie)
 
     gehakt_quiche = Recept("Gehakt quiche met paprika", "Een heerlijke quiche met gehakt, kaas en paprika.")
-    gehakt_quiche.voeg_ingredient_toe(Ingredient("rundergehakt", 100, "gram", 250))
+
+    quiche_gehakt = Ingredient("rundergehakt", 100, "gram", 250)
+    quiche_gehakt.set_plantaardig_alternatief(
+        Ingredient("plantaardig gehakt", 100, "gram", 180)
+        )
+    gehakt_quiche.voeg_ingredient_toe(quiche_gehakt)
+
+
     gehakt_quiche.voeg_ingredient_toe(Ingredient("rode paprika", 0.5, "stuk", 25))
     gehakt_quiche.voeg_ingredient_toe(Ingredient("ui", 0.5, "stuk", 20))
     gehakt_quiche.voeg_ingredient_toe(Ingredient("quichedeeg", 1, "vel", 200))
     gehakt_quiche.voeg_ingredient_toe(Ingredient("knoflook", 1, "teentje", 5))
-    gehakt_quiche.voeg_ingredient_toe(Ingredient("geraspte kaas", 30, "gram", 90))
-    gehakt_quiche.voeg_ingredient_toe(Ingredient("ei", 1, "stuk", 70))
-    gehakt_quiche.voeg_ingredient_toe(Ingredient("kookroom", 50, "milliliter", 100))
+
+    kaas = Ingredient("geraspte kaas", 30, "gram", 90)
+    kaas.set_plantaardig_alternatief(
+        Ingredient("plantaardige kaas", 30, "gram", 70)
+        )
+    gehakt_quiche.voeg_ingredient_toe(kaas)
+
+
+
+    ei = Ingredient("ei", 1, "stuk", 70)
+    ei.set_plantaardig_alternatief(
+        Ingredient("aquafaba", 45, "milliliter", 8)
+    )
+    gehakt_quiche.voeg_ingredient_toe(ei)
+
+    kookroom = Ingredient("kookroom", 50, "milliliter", 100)
+    kookroom.set_plantaardig_alternatief(
+        Ingredient("plantaardige kookroom", 50, "milliliter", 80)
+    )
+    gehakt_quiche.voeg_ingredient_toe(kookroom)
+
     gehakt_quiche.voeg_ingredient_toe(Ingredient("zout", 0.25, "theelepel", 0))
     gehakt_quiche.voeg_ingredient_toe(Ingredient("peper", 0.25, "theelepel", 2))
     gehakt_quiche.voeg_ingredient_toe(Ingredient("tijm", 0.25, "theelepel", 5))
@@ -57,7 +85,13 @@ def maak_recepten():
         "Een klassieke Italiaanse spaghetti bolognese met een rijke vlees- en tomatensaus.")
     
     spaghetti_bolognese.voeg_ingredient_toe(Ingredient("spaghetti", 100, "gram", 300))
-    spaghetti_bolognese.voeg_ingredient_toe(Ingredient("rundergehakt", 150, "gram", 400))
+
+    bolognese_gehakt = Ingredient("gehakt", 150, "gram", 400)
+    bolognese_gehakt.set_plantaardig_alternatief(
+        Ingredient("plantaardig gehakt", 150, "gram", 300)
+    )
+    spaghetti_bolognese.voeg_ingredient_toe(bolognese_gehakt)
+
     spaghetti_bolognese.voeg_ingredient_toe(Ingredient("ui", 0.5, "stuk", 20))
     spaghetti_bolognese.voeg_ingredient_toe(Ingredient("knoflook", 1, "teentje", 5))
     spaghetti_bolognese.voeg_ingredient_toe(Ingredient("tomatenpuree", 1, "eetlepel", 25))
